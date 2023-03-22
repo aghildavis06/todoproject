@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card shadow" style="margin-top: 10px">
+  <div class="card-header">{{detail.name}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{detail.priority}}</h5>
+    <p class="card-text">{{detail.date}}</p>
+    <a href="{% url 'classdeleteview' detail.id %}" class="btn btn-danger">Remove</a>
+    <a href="{% url 'classupdateview' detail.id %}" class="btn btn-success">Update</a>
+  </div>
+</div>
+
+{% endblock %}
